@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="home">
+  <div class="home-header">
+    <h1>📚 TIL Log</h1>
+    <p class="subtitle">Mỗi ngày học 1 thứ về Cowork — ghi lại hết, kể cả fail.</p>
+  </div>
+
+  <div class="posts">
+    {{ range where .Site.RegularPages "Type" "posts" }}
+    <article class="post-card">
+      <div class="post-card-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02/01/2006" }}</time>
+        {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p class="post-summary">{{ .Summary }}</p>
+    </article>
+    {{ else }}
+    <p class="empty">Chưa có bài nào. Bài đầu tiên đang trên đường... 🚀</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

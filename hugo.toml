@@ -1,0 +1,15 @@
+baseURL = "https://DawnHNguuyen.github.io/cowork-til/"
+languageCode = "vi"
+title = "Cowork TIL"
+
+[params]
+  description = "Today I Learned — hành trình khám phá Cowork của Claude Rookie"
+  author = "Claude Rookie"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"

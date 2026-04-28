@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+      <span class="site-desc">{{ .Site.Params.description }}</span>
+    </nav>
+  </header>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="footer">
+    <p>Made with ☕ + Hugo + GitHub Pages · {{ .Site.Params.author }}</p>
+  </footer>
+</body>
+</html>

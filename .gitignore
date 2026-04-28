@@ -1,0 +1,14 @@
+# Hugo build output
+public/
+resources/
+
+# Local config — PAT stored here, NEVER commit
+config.local.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

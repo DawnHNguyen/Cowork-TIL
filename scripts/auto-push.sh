@@ -1,6 +1,5 @@
 #!/bin/bash
-# auto-push.sh — Chạy tự động bởi macOS LaunchAgent mỗi sáng
-# Kiểm tra xem Cowork agent đã viết bài mới chưa, nếu có thì commit + push
+# auto-push.sh — Tạo PR cho mỗi bài TIL mới, chạy tự động bởi macOS LaunchAgent lúc 9:30 AM
 
 REPO="$HOME/VSCProject/Cowork-TIL"
 LOG="$REPO/scripts/auto-push.log"
@@ -13,27 +12,66 @@ log "=== auto-push started ==="
 
 cd "$REPO" || { log "ERROR: cannot cd into $REPO"; exit 1; }
 
-# Kiểm tra có thay đổi chưa commit không
-if git diff --quiet && git diff --staged --quiet; then
-    log "Nothing to commit. Skipping."
+# Đảm bảo đang ở main và up-to-date
+git checkout main >> "$LOG" 2>&1
+git pull >> "$LOG" 2>&1
+
+# Tìm file TIL mới (untracked) trong content/posts/
+NEW_POST=$(git ls-files --others --exclude-standard content/posts/ | head -1)
+
+if [ -z "$NEW_POST" ]; then
+    log "No new TIL post found. Skipping."
     exit 0
 fi
 
-log "Changes detected:"
-git diff --name-only >> "$LOG"
+log "New post detected: $NEW_POST"
 
-# Commit
+# Lấy basename để đặt tên branch (vd: 2026-04-29-til-002-sessions-ephemeral-state)
+BASENAME=$(basename "$NEW_POST" .md)
+BRANCH_NAME="til/${BASENAME}"
+
+log "Creating branch: $BRANCH_NAME"
+
+# Tạo branch mới từ main
+git checkout -b "$BRANCH_NAME" >> "$LOG" 2>&1
+
+# Commit post mới + curriculum đã update
 git add content/posts/ curriculum.md
-COMMIT_MSG="auto: TIL $(date '+%Y-%m-%d')"
-git commit -m "$COMMIT_MSG" >> "$LOG" 2>&1
+git commit -m "til: ${BASENAME}" >> "$LOG" 2>&1
 
-# Push (dùng SSH remote đã có sẵn)
-git push >> "$LOG" 2>&1
+# Push branch lên GitHub
+git push origin "$BRANCH_NAME" >> "$LOG" 2>&1
+
+if [ $? -ne 0 ]; then
+    log "ERROR: push failed. Check SSH key."
+    git checkout main
+    exit 1
+fi
+
+# Đọc title từ front matter của bài post
+POST_TITLE=$(grep '^title:' "$NEW_POST" | sed 's/title: //' | tr -d '"')
+if [ -z "$POST_TITLE" ]; then
+    POST_TITLE="TIL: ${BASENAME}"
+fi
+
+# Tạo PR bằng gh CLI
+gh pr create \
+    --title "$POST_TITLE" \
+    --body "📚 **Daily TIL post** — tự động tạo bởi Cowork agent lúc 9:05 AM.
+
+Review nội dung bài viết, merge để publish lên blog.
+
+**Blog URL sau khi merge:** https://DawnHNguuyen.github.io/cowork-til/" \
+    --base main \
+    --head "$BRANCH_NAME" >> "$LOG" 2>&1
 
 if [ $? -eq 0 ]; then
-    log "✅ Pushed successfully!"
+    log "✅ PR created successfully for: $POST_TITLE"
 else
-    log "❌ Push failed. Check SSH key and remote."
+    log "ERROR: gh pr create failed. Is gh CLI authenticated?"
 fi
+
+# Quay về main
+git checkout main >> "$LOG" 2>&1
 
 log "=== auto-push done ==="

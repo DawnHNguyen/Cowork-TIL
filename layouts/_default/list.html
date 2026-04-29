@@ -8,7 +8,7 @@
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02/01/2006" }}</time>
         {{ range .Params.tags }}<span class="tag">{{ . }}</span>{{ end }}
       </div>
-      <h2><a href="{{ .Site.Home.RelPermalink }}">{{ .Title }}</a></h2>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <p class="post-summary">{{ .Summary }}</p>
     </article>
     {{ end }}

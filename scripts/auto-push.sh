@@ -4,6 +4,9 @@
 REPO="$HOME/VSCProject/Cowork-TIL"
 LOG="$REPO/scripts/auto-push.log"
 
+# Đảm bảo PATH đầy đủ (launchd chạy với PATH tối giản)
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
+
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG"
 }

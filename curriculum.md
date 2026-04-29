@@ -20,7 +20,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 > *Mục tiêu: Hiểu mental model cốt lõi trước khi dùng bất kỳ feature nào*
 
 - ✅ **#001** (2026-04-28) — Cowork là gì, và tại sao tôi dùng nó để tự học chính nó
-- ⏳ **#002** — Sessions & Ephemeral State: tại sao agent không nhớ gì — và đây không phải bug
+- ✅ **#002** (2026-04-29) — Sessions & Ephemeral State: tại sao agent không nhớ gì — và đây không phải bug
 - ⏳ **#003** — Workspace & Files: agent đọc/ghi file trên máy bạn như thế nào
 - ⏳ **#004** — Cách "giao việc" đúng cho agent: instruction writing 101
 - ⏳ **#005** — Scheduled Tasks: cơ chế, limitations, và tại sao Mac phải awake

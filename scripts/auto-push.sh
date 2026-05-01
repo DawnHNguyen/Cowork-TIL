@@ -64,7 +64,7 @@ gh pr create \
 
 Review the post content and merge to publish to the blog.
 
-**Blog URL after merge:** https://DawnHNguuyen.github.io/cowork-til/" \
+**Blog URL after merge:** https://dawnhnguyen.github.io/Cowork-TIL/" \
     --base main \
     --head "$BRANCH_NAME" >> "$LOG" 2>&1
 

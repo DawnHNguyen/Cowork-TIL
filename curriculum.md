@@ -23,7 +23,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 - ✅ **#002** (2026-04-29) — Sessions & Ephemeral State: tại sao agent không nhớ gì — và đây không phải bug
 - ✅ **#003** (2026-04-30) — Workspace & Files: agent đọc/ghi file trên máy bạn như thế nào
 - ✅ **#004** (2026-05-01) — Cách "giao việc" đúng cho agent: instruction writing 101
-- ⏳ **#005** — Scheduled Tasks: cơ chế, limitations, và tại sao Mac phải awake
+- ✅ **#005** (2026-05-02) — Scheduled Tasks: cơ chế, limitations, và tại sao Mac phải awake
 
 ---
 

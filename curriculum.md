@@ -32,7 +32,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 > *Mục tiêu: Dùng Cowork để tạo và xử lý file thay vì tự làm tay*
 
 - ✅ **#006** (2026-05-04) — Skills trong Cowork là gì và tại sao chúng tồn tại
-- ⏳ **#007** — docx skill: tạo Word document chuyên nghiệp bằng 1 câu lệnh
+- ✅ **#007** (2026-05-05) — docx skill: tạo Word document chuyên nghiệp bằng 1 câu lệnh
 - ⏳ **#008** — pptx skill: từ bullet points đến slide deck trong 2 phút
 - ⏳ **#009** — xlsx skill: spreadsheet, formula, chart — agent lo hết
 - ⏳ **#010** — pdf skill: tạo, đọc, merge PDF — và khi nào nên dùng

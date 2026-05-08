@@ -35,7 +35,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 - ✅ **#007** (2026-05-05) — docx skill: tạo Word document chuyên nghiệp bằng 1 câu lệnh
 - ✅ **#008** (2026-05-06) — pptx skill: từ bullet points đến slide deck trong 2 phút
 - ✅ **#009** (2026-05-07) — xlsx skill: spreadsheet, formula, chart — agent lo hết
-- ⏳ **#010** — pdf skill: tạo, đọc, merge PDF — và khi nào nên dùng
+- ✅ **#010** (2026-05-08) — pdf skill: tạo, đọc, merge PDF — và khi nào nên dùng
 
 ---
 

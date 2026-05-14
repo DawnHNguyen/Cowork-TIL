@@ -47,7 +47,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 - ✅ **#012** (2026-05-11) — Web Fetch: agent đọc bất kỳ webpage nào và tóm tắt cho bạn
 - ✅ **#013** (2026-05-12) — Bash trong Cowork: agent chạy shell command — và sandbox là gì
 - ✅ **#014** (2026-05-13) — Artifacts: live HTML widget tái sử dụng được là gì
-- ⏳ **#015** — Multi-tool workflow: kết hợp search + bash + file trong 1 task
+- ✅ **#015** (2026-05-14) — Multi-tool workflow: kết hợp search + bash + file trong 1 task
 
 ---
 

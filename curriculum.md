@@ -55,7 +55,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 
 > *Mục tiêu: Mở rộng khả năng agent ra ngoài máy tính của bạn*
 
-- ⏳ **#016** — MCP là gì? Model Context Protocol explained như bạn 5 tuổi
+- ✅ **#016** (2026-05-15) — MCP là gì? Model Context Protocol explained như bạn 5 tuổi
 - ⏳ **#017** — Plugins & Connectors: cách install và tại sao ecosystem này quan trọng
 - ⏳ **#018** — Notion connector: agent đọc/ghi Notion database
 - ⏳ **#019** — Gmail connector: draft, tìm kiếm email — agent làm inbox thay bạn

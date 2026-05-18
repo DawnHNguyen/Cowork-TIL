@@ -57,7 +57,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 
 - ✅ **#016** (2026-05-15) — MCP là gì? Model Context Protocol explained như bạn 5 tuổi
 - ✅ **#017** (2026-05-16) — Plugins & Connectors: cách install và tại sao ecosystem này quan trọng
-- ⏳ **#018** — Notion connector: agent đọc/ghi Notion database
+- ✅ **#018** (2026-05-18) — Notion connector: agent đọc/ghi Notion database
 - ⏳ **#019** — Gmail connector: draft, tìm kiếm email — agent làm inbox thay bạn
 - ⏳ **#020** — GitHub connector: tại sao không có — và workaround bằng PAT
 - ⏳ **#021** — Security trong Cowork: PAT, scope, và cách không làm leak credentials

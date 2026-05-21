@@ -59,7 +59,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 - ✅ **#017** (2026-05-16) — Plugins & Connectors: cách install và tại sao ecosystem này quan trọng
 - ✅ **#018** (2026-05-18) — Notion connector: agent đọc/ghi Notion database
 - ✅ **#019** (2026-05-19) — Gmail connector: draft, tìm kiếm email — agent làm inbox thay bạn
-- ⏳ **#020** — GitHub connector: tại sao không có — và workaround bằng PAT
+- ✅ **#020** (2026-05-21) — GitHub connector: tại sao không có — và workaround bằng PAT
 - ⏳ **#021** — Security trong Cowork: PAT, scope, và cách không làm leak credentials
 
 ---

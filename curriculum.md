@@ -69,7 +69,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 > *Mục tiêu: Build workflow phức tạp, tạo tools riêng, tối ưu agent*
 
 - ✅ **#022** (2026-05-25) — Custom Skills: tạo skill của riêng bạn bằng Skill Creator
-- ⏳ **#023** — Cowork vs Claude Code: khi nào dùng cái nào — decision framework
+- ✅ **#023** (2026-05-26) — Cowork vs Claude Code: khi nào dùng cái nào — decision framework
 - ⏳ **#024** — Cowork cho Android/KMP dev: 5 workflow thực tế có thể áp dụng ngay
 - ⏳ **#025** — Agent Prompt Engineering: viết AGENT_PROMPT.md tốt hơn
 - ⏳ **#026** — Debugging agent: khi agent làm sai thì debug như thế nào

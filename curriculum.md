@@ -81,7 +81,7 @@ Agent đọc file này để biết hôm nay viết bài nào.
 > *Mục tiêu: Nhìn lại hành trình, rút ra mental models, nhìn về tương lai*
 
 - ✅ **#027** (2026-06-01) — Fail Wall tổng hợp: những lần tôi thử và agent làm sai (hoặc tôi hỏi sai)
-- ⏳ **#028** — Mental Models: 5 cách nghĩ về Cowork giúp tôi dùng hiệu quả hơn
+- ✅ **#028** (2026-06-03) — Mental Models: 5 cách nghĩ về Cowork giúp tôi dùng hiệu quả hơn
 - ⏳ **#029** — Cowork trong team: khi nhiều người dùng cùng 1 agent
 - ⏳ **#030** — What's next: tương lai của AI agents và Cowork trong 12 tháng tới
 

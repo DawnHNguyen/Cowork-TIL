@@ -91,5 +91,5 @@ Agent đọc file này để biết hôm nay viết bài nào.
 
 - ✅ **#031** (2026-06-08) — Claude in Chrome: browsing agent và so sánh với Cowork
 - ✅ **#032** (2026-06-09) — Vibe coding với Cowork: khác gì so với Claude Code?
-- ⏳ **#033** — Cowork + KMP: generate boilerplate, docs, test tự động
+- ✅ **#033** (2026-06-11) — Cowork + KMP: generate boilerplate, docs, test tự động
 - ⏳ **#034** — Building a second brain với Cowork + Notion
